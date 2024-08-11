@@ -16,6 +16,8 @@ public class UserProcessor {
         // список, що повертається повинен бути відсортованим по полю "name" в алфавітному порядку Ascending (тобто від A -> Z)
 
         //!!! У тілі метода ЗАБОРОНЕНО використовувати класичні цикли for, while, do-while для перебору по колекціям
+
+
         return users.stream().filter(user -> user.getAge() > 25)
                 .filter(user -> user.getEmail().endsWith("ilovedogs.com") || user.getEmail().endsWith("ilovecats.com"))
                 .sorted(Comparator.comparing(User::getName))
