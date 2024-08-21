@@ -20,7 +20,7 @@ public class UserLoader {
         List<User> userList;
         FileReader reader = new FileReader(filePath);
         Type userListType = new TypeToken<List<User>>() {}.getType();
-        userList = new gson.fromJson(reader, userListType);
+        userList = gson.fromJson(reader, userListType);
         return userList;
     }
 }
